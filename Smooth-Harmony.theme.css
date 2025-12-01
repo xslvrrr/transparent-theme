@@ -1,25 +1,56 @@
 /**
  * @name Smooth Harmony
- * @author r
- * @description Smooth and responsive Discord theme with nitro colors applied everywhere, cleaner look and less clutter.
- * @version 0.9.9.1
+ * @author xslvrrr
+ * @description Smooth and responsive Discord theme with transparency, nitro colors, cleaner look and less clutter.
+ * @version 1.0.0
+ * @source local
  */
 
-@import url('https://github.com/xslvrrr/transparent-theme/blob/main/Theme%20code/responsive.css');
+/* Import the updated local responsive theme */
+@import url('https://raw.githubusercontent.com/xslvrrr/transparent-theme/main/Theme%20code/responsive.css');
 
-/* Settings */
-:root{
-    --accent: var(--os-accent-color); 
+/* Transparency Settings - CRITICAL FOR TRANSPARENCY TO WORK */
+:root {
+    /* Accent color - uses your OS accent color by default */
+    --accent: var(--os-accent-color);
+
+    /* Transparency overlay variables */
+    /* Adjust these values to control transparency levels */
+    /* Lower alpha values = more transparent */
+
+    --bg-overlay-home: rgba(0, 0, 0, 0.5);
+    /* Home/Server discovery background */
+    --bg-overlay-1: rgba(0, 0, 0, 0.55);
+    /* Light theme secondary */
+    --bg-overlay-2: rgba(0, 0, 0, 0.6);
+    /* Secondary backgrounds */
+    --bg-overlay-3: rgba(0, 0, 0, 0.65);
+    /* Tertiary backgrounds */
+    --bg-overlay-4: rgba(0, 0, 0, 0.7);
+    /* Input fields, search bars */
+    --bg-overlay-5: rgba(0, 0, 0, 0.75);
+    /* Hover states */
+    --bg-overlay-6: rgba(0, 0, 0, 0.8);
+    /* Buttons, badges */
+    --bg-overlay-chat: rgba(0, 0, 0, 0.5);
+    /* Main chat background */
+    --bg-overlay-app-frame: rgba(0, 0, 0, 0.6);
+    /* Sidebar, panels */
+    --bg-overlay-selected: rgba(0, 0, 0, 0.75);
+    /* Selected items */
+    --bg-overlay-hover: rgba(255, 255, 255, 0.1);
+    /* Hover overlay */
 }
-/*  Change the Purple discord accent 
-    This color will be the "new messages bar", 
-    join arrows, etc.
 
+/*  Change the accent color if you want something different
+    
     Examples:
     --accent: aqua;
     --accent: deeppink;
     --accent: greenyellow;
     --accent: aquamarine;
     --accent: crimson;
- 
-    --accent: --os-accent-color is the default  */    
+    --accent: #FF6B9D;
+    
+    Default: --accent: var(--os-accent-color);
+*/
