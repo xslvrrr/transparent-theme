@@ -358,8 +358,9 @@ nav[class*="container"],
 
 /* Dynamic color variables - extracted from album cover */
 #vc-spotify-player {
-    /* Vencord may set --vc-spotify-color, fallback to accent */
-    --spotify-primary-color: var(--vc-spotify-color, var(--accent, var(--brand-experiment)));
+    /* Vencord may set --vc-spotify-color via color extraction plugin
+       Falls back to Spotify green if not available */
+    --spotify-primary-color: var(--vc-spotify-color, #1DB954);
     --spotify-control-color: var(--spotify-primary-color);
 
     /* Smooth color transitions when songs change */
